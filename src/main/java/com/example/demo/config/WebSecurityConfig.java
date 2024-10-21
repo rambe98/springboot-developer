@@ -49,8 +49,10 @@ public class WebSecurityConfig {
    @Bean
    public CorsConfigurationSource corsConfigurationSource() {
       CorsConfiguration configuration = new CorsConfiguration();
-      configuration.setAllowedOrigins(Arrays.asList("http://app.han-portfolio.site",
-    		"http://localhost:3000","https://app.han-portfolio.site")); // 프론트엔드 주소
+      configuration.setAllowedOrigins(Arrays.asList(
+    		  "http://app.han-portfolio.site",
+    		  "http://localhost:3000",
+    		  "https://app.han-portfolio.site")); // 프론트엔드 주소
       configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
       configuration.setAllowedHeaders(Arrays.asList("*"));
       configuration.setAllowCredentials(true);
